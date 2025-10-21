@@ -5,10 +5,10 @@ export async function GET() {
   const playlistId = process.env.YOUTUBE_PLAYLIST_ID;
 
   const res = await fetch(
-    `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=10&key=${apiKey}`
+    `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=20&key=${apiKey}`
   );
   const data = await res.json();
-
+  
   const videos = data.items.map((item: any) => ({
     id: item.snippet.resourceId.videoId,
     title: item.snippet.title,

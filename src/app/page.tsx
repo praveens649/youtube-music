@@ -1,5 +1,9 @@
-import JamSection from "./components/jam-section"
+import DashboardPage from "./dashboard/page"
+
 
 export default function Page() {
-  return <JamSection />
-}
+  return (
+  <>
+  <DashboardPage /> 
+  </>
+)};
